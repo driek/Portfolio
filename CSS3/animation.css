@@ -1,0 +1,70 @@
+@CHARSET "UTF-8";
+@keyframes myAnimation
+{
+	0%   {background: red;}
+	25%  {background: yellow;}
+	50%  {background: blue;}
+	100% {background: green;
+	transform: rotateY(180deg);}
+}
+
+@-moz-keyframes myAnimation /* Firefox */
+{
+	0%   {background: red;}
+	25%  {background: yellow;}
+	50%  {background: blue;}
+	100% {background: green;
+	-moz-transform: rotateY(180deg);}
+}
+
+@-webkit-keyframes myAnimation /* Safari and Chrome */
+{
+	0%   {background: red;}
+	25%  {background: yellow;}
+	50%  {background: blue;}
+	100% {background: green;
+	-webkit-transform: rotateY(180deg);}
+}
+
+
+a.myLink:link {color:#CCC;}      /* unvisited link */
+a.myLink:visited {color:#CCC;}  /* visited link */
+a.myLink:hover {color:#C00;}  /* mouse over link */
+a.myLink:active {color:#CCC;}  /* selected link */
+
+a.myLink
+{
+	color:#CCC;
+	transition:color 1s;
+	-moz-transition: color 1s; /* Firefox 4 */
+	-webkit-transition: color 1s; /* Safari and Chrome */
+	-o-transition: color 1s; /* Opera */
+}
+
+#animationDiv
+{
+	border-radius: 25px;
+	overflow:auto;
+	text-align: center;
+	width: 200px;
+	height: 200px;
+	animation: myAnimation 5s linear 0s infinite alternate;
+	/* Firefox: */
+	-moz-animation: myAnimation 5s linear 0s infinite alternate;
+	/* Safari and Chrome: */
+	-webkit-animation: myAnimation 5s linear 0s infinite alternate;
+	box-shadow:3px 3px 4px black;
+}
+
+.animationText
+{
+	color: #CCC;
+	position:relative;
+	top: 50px;
+	/* text-shadow: 2px, 2px, 5px, #FFFFFF; */
+	text-shadow:3px 3px 4px white;
+}
+
+
+
+
